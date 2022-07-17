@@ -1,6 +1,7 @@
 package se.lexicon;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class TodoItem {
 
@@ -12,20 +13,14 @@ public class TodoItem {
     boolean overdue;
     Person creator;
 
-    public TodoItem(){
-        this.todoItemId = 0;
-        this.title = "NOT_ SPECIFIED";
-        this.taskDescription = "empty";
-        this.deadLine = LocalDate.MIN;
-        this.done = false;
-    }
-
     public TodoItem(int todoItemId, String title, String taskDescription, LocalDate deadLine, Person creator) {
         this.todoItemId = todoItemId;
         this.title = title;
         this.taskDescription = taskDescription;
         this.deadLine = deadLine;
         this.creator = creator;
+        setTitle(title);
+        setDeadLine(deadLine);
     }
 
     public int getId() {
@@ -36,6 +31,7 @@ public class TodoItem {
     }
 
     public void setTitle(String title) {
+        if(title.equals(null)|| title.equals("")) throw new IllegalArgumentException("Title is not allowed to be null or empty");
         this.title = title;
     }
 
@@ -52,6 +48,7 @@ public class TodoItem {
     }
 
     public void setDeadLine(LocalDate deadLine) {
+        if(deadLine == null)throw new IllegalArgumentException("deadline is not allowed to be null");
         this.deadLine = deadLine;
     }
 
@@ -80,7 +77,28 @@ public class TodoItem {
         }
         return false;
     }
-    public void getSummary(){
-        System.out.println("todoItem ID: " + todoItemId+ " Title: "+ " Deadline " + deadLine);
+    @Override
+    public String toString() {
+        return "TodoItem{" +
+                "todoItemId=" + todoItemId +
+                ", title='" + title + '\'' +
+                ", taskDescription='" + taskDescription + '\'' +
+                ", deadLine=" + deadLine +
+                ", done=" + done +
+                ", overdue=" + overdue +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof TodoItem)) return false;
+        TodoItem todoItem = (TodoItem) o;
+        return todoItemId == todoItem.todoItemId && isDone() == todoItem.isDone() && isOverdue() == todoItem.isOverdue() && getTitle().equals(todoItem.getTitle()) && getTaskDescription().equals(todoItem.getTaskDescription()) && getDeadLine().equals(todoItem.getDeadLine());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(todoItemId, getTitle(), getTaskDescription(), getDeadLine(), isDone(), isOverdue());
     }
 }

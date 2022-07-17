@@ -7,16 +7,13 @@ public class TodoItemTask {
     private TodoItem todoItem;//represent the details what assignee should do before deadline. Not null
     private Person assignee;
 
-    public TodoItemTask (){
-        this.todoItemTaskId = 0;
-        this.assignee = null;
-        this.assigned = false;
-        this.todoItem = new TodoItem();
-    }
     public TodoItemTask(boolean assigned, TodoItem todoItem, Person assignee){
         this.assigned = assigned;
         this.todoItem = todoItem;
         this.assignee = assignee;
+        setTodoItem(todoItem);
+        setAssigned(assigned);
+
     }
 
     public int getId() {
@@ -39,6 +36,7 @@ public class TodoItemTask {
     }
 
     public void setTodoItem(TodoItem todoItem) {
+        if(todoItem == null) throw new IllegalArgumentException("todoItem is not allowed to be null");
         this.todoItem = todoItem;
     }
 
