@@ -1,4 +1,7 @@
-package se.lexicon;
+package se.lexicon.person;
+
+import se.lexicon.appUser.AppUser;
+import se.lexicon.sequencers.PersonIdSequencer;
 
 import java.util.Objects;
 
@@ -11,16 +14,18 @@ public class Person {
 
     private AppUser credentials;
 
-    public Person(int id, String firstName, String lastName, String email) {
-        this.id = id;
+    public Person(String firstName, String lastName, String email, AppUser credentials) {
+        this();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.credentials = credentials;
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
     }
     public Person() {
+        id= PersonIdSequencer.nextId();
     }
 
     public int getId() {

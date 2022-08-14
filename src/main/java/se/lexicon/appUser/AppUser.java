@@ -1,6 +1,4 @@
-package se.lexicon;
-
-import java.util.Objects;
+package se.lexicon.appUser;
 
 public class AppUser {
     private String useName;  // not allowed to be null or empty

@@ -4,25 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9becee5c-2894-489f-802d-dedf3a9d74a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/TodoItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/TodoItemTask.java" afterDir="false" />
+    <list default="true" id="9becee5c-2894-489f-802d-dedf3a9d74a1" name="Changes" comment="todoItem part 2, done!">
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/appUser/AppUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/appUser/AppUserDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/person/PersonDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/person/PersonDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/sequencers/PersonIdSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/sequencers/TodoItemIdSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/sequencers/TodoItemIdTaskSequencer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItem/TodoItemDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItem/TodoItemDaoCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItemTask/TodoItemTaskDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItemTask/TodoItemTaskDAOCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/AppUserDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/AppUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/PersonDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/TodoItemDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/TodoItemTaskDAOTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/TodoItemTaskTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/TodoItemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/AppRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/appUser/AppRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/appUser/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/TodoItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItem/TodoItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/se/lexicon/TodoItemTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/se/lexicon/todoItemTask/TodoItemTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/se/lexicon/PersonTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/se/lexicon/PersonTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExportTestResults" outputFolder="$PROJECT_DIR$" openResultsInEditor="true" userTempatePath="" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -39,12 +61,121 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;
+    ]
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="se.lexicon" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.TodoItemTaskDAOTest.test_remove_unsuccessfully">
+    <configuration name="TodoItemTaskDAOTest.test_find_all_successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Todo_IT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.TodoItemTaskDAOTest" />
+      <option name="METHOD_NAME" value="test_find_all_successfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoItemTaskDAOTest.test_find_by_Assigned_Status_successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Todo_IT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.TodoItemTaskDAOTest" />
+      <option name="METHOD_NAME" value="test_find_by_Assigned_Status_successfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoItemTaskDAOTest.test_find_by_person_id_successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Todo_IT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.TodoItemTaskDAOTest" />
+      <option name="METHOD_NAME" value="test_find_by_person_id_successfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoItemTaskDAOTest.test_remove_successfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Todo_IT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.TodoItemTaskDAOTest" />
+      <option name="METHOD_NAME" value="test_remove_successfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoItemTaskDAOTest.test_remove_unsuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Todo_IT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="se.lexicon.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="se.lexicon" />
+      <option name="MAIN_CLASS_NAME" value="se.lexicon.TodoItemTaskDAOTest" />
+      <option name="METHOD_NAME" value="test_remove_unsuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TodoItemTaskDAOTest.test_remove_unsuccessfully" />
+        <item itemvalue="JUnit.TodoItemTaskDAOTest.test_remove_successfully" />
+        <item itemvalue="JUnit.TodoItemTaskDAOTest.test_find_by_person_id_successfully" />
+        <item itemvalue="JUnit.TodoItemTaskDAOTest.test_find_by_Assigned_Status_successfully" />
+        <item itemvalue="JUnit.TodoItemTaskDAOTest.test_find_all_successfully" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,6 +185,28 @@
       <option name="presentableId" value="Default" />
       <updated>1656410795986</updated>
     </task>
+    <task id="LOCAL-00001" summary="todoItem part 1, done!">
+      <created>1657375629529</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657375629529</updated>
+    </task>
+    <task id="LOCAL-00002" summary="todoItem part 1, done!">
+      <created>1657377288557</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657377288557</updated>
+    </task>
+    <task id="LOCAL-00003" summary="todoItem part 2, done!">
+      <created>1658094734168</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658094734168</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -66,5 +219,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="todoItem part 1, done!" />
+    <MESSAGE value="todoItem part 2, done!" />
+    <option name="LAST_COMMIT_MESSAGE" value="todoItem part 2, done!" />
   </component>
 </project>

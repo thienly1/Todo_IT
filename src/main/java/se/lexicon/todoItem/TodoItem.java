@@ -1,4 +1,7 @@
-package se.lexicon;
+package se.lexicon.todoItem;
+
+import se.lexicon.person.Person;
+import se.lexicon.sequencers.TodoItemIdSequencer;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -6,22 +9,27 @@ import java.util.Objects;
 public class TodoItem {
 
     private int todoItemId;
-    String title; // not allow to be null or empty.
-    String taskDescription;
-    LocalDate deadLine; //TodoItem is overdue if current date > deadline. Not allowed to be null
+    private String title; // not allow to be null or empty.
+    private String taskDescription;
+    private LocalDate deadLine; //TodoItem is overdue if current date > deadline. Not allowed to be null
     boolean done;
-    boolean overdue;
     Person creator;
 
-    public TodoItem(int todoItemId, String title, String taskDescription, LocalDate deadLine, Person creator) {
-        this.todoItemId = todoItemId;
+    public TodoItem() {
+        todoItemId= TodoItemIdSequencer.nextId();
+    }
+
+    public TodoItem(String title, String taskDescription, LocalDate deadLine, boolean done, Person creator) {
+        this();
         this.title = title;
         this.taskDescription = taskDescription;
         this.deadLine = deadLine;
         this.creator = creator;
+        this.done= done;
         setTitle(title);
         setDeadLine(deadLine);
     }
+
 
     public int getId() {
         return todoItemId;
@@ -85,7 +93,6 @@ public class TodoItem {
                 ", taskDescription='" + taskDescription + '\'' +
                 ", deadLine=" + deadLine +
                 ", done=" + done +
-                ", overdue=" + overdue +
                 '}';
     }
 

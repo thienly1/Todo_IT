@@ -1,18 +1,22 @@
 package se.lexicon;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import se.lexicon.appUser.AppRole;
+import se.lexicon.appUser.AppUser;
+import se.lexicon.person.Person;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class PersonTest {
 
     public Person personTest;
-    public AppUser test;
+
     @BeforeEach
     public void init(){
-        personTest = new Person(12,"Ly", "Ta", "ly@mail.com");
-        test = new AppUser("Ly", "123456",AppRole.ROLE_APP_ADMIN);
+        personTest = new Person();
+
     }
 
     @Test
@@ -27,14 +31,20 @@ class PersonTest {
                 () -> personTest.setFirstName(null));
     }
     @Test
-    void setPassWork_successfully(){
-        String a= "234567";
-        test.setPassword(a);
-        assertEquals(a, test.getPassword());
+    void set_email_successfully(){
+        personTest.setEmail("ly@mail.com");
+        assertEquals(personTest.getEmail(), "ly@mail.com");
     }
     @Test
-    void setPassWork_throw_IllegalArgumentException(){
-        assertThrows(IllegalArgumentException.class,
-                () ->test.setPassword(null));
+    void set_email_throw_IllegalArgumentException(){
+        assertThrows(IllegalArgumentException.class, ()->personTest.setEmail(null));
     }
+    @Test
+    void set_credential_successfully(){
+        AppUser appUser = new AppUser("ly", "135246", AppRole.ROLE_APP_ADMIN);
+        personTest.setCredentials(appUser);
+        Assertions.assertEquals(personTest.getCredentials(), appUser);
+    }
+
+
 }

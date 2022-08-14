@@ -1,4 +1,8 @@
-package se.lexicon;
+package se.lexicon.todoItemTask;
+
+import se.lexicon.person.Person;
+import se.lexicon.sequencers.TodoItemIdTaskSequencer;
+import se.lexicon.todoItem.TodoItem;
 
 public class TodoItemTask {
 
@@ -7,13 +11,16 @@ public class TodoItemTask {
     private TodoItem todoItem;//represent the details what assignee should do before deadline. Not null
     private Person assignee;
 
-    public TodoItemTask(boolean assigned, TodoItem todoItem, Person assignee){
-        this.assigned = assigned;
+    public TodoItemTask() {
+        todoItemTaskId = TodoItemIdTaskSequencer.nextId();
+    }
+
+    public TodoItemTask(TodoItem todoItem, Person assignee){
+        this();
         this.todoItem = todoItem;
         this.assignee = assignee;
         setTodoItem(todoItem);
         setAssigned(assigned);
-
     }
 
     public int getId() {
@@ -21,14 +28,16 @@ public class TodoItemTask {
     }
 
     public boolean isAssigned() {
-        return assigned;
+        if(assignee==null){
+            assigned= false;
+            return false;
+        }
+        assigned= true;
+        return true;
     }
 
     public void setAssigned(boolean assigned) {
-        if(assignee != null) {
-            this.assigned = assigned;
-        }
-        this.assigned = false;
+        this.assigned= assigned;
     }
 
     public TodoItem getTodoItem() {
@@ -50,5 +59,15 @@ public class TodoItemTask {
 
     public String getSummary(){
         return"{id: " + todoItemTaskId + ", assigned: " + assigned + ", what assignee should do before deadline: " + todoItem + ", assignee: " + assignee+ "}";
+    }
+
+    @Override
+    public String toString() {
+        return "TodoItemTask{" +
+                "todoItemTaskId=" + todoItemTaskId +
+                ", assigned=" + assigned +
+                ", todoItem=" + todoItem +
+                ", assignee=" + assignee +
+                '}';
     }
 }
